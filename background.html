@@ -1,0 +1,18 @@
+<html> 
+  <head> 
+    <script type="text/javascript"> 
+      var selection_callbacks = []; 
+      function getSelection(callback) { 
+        selection_callbacks.push(callback); 
+        chrome.tabs.executeScript(null, { file: 
+"contentscript.js" }); 
+      }; 
+      chrome.extension.onRequest.addListener(function (request) { 
+        var callback = selection_callbacks.shift(); 
+        callback(request); 
+      }); 
+    </script> 
+  </head> 
+  <body> 
+  </body> 
+</html> 
