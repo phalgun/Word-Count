@@ -11,7 +11,11 @@ Do what the fuck you want to with it.
 
 To Install
 
+<<<<<<< HEAD
 Download it, unzip it somewhere, load it up in your extensions tab by loading an "unpacked" extension.
+=======
+Download it, unzip it somewhere, load it up in your extensions tab chrome://settings/extensions by loading an "unpacked" extension.
+>>>>>>> ec356bbeaa2d0d1cdde5a402a9eb7750c1875f8f
 
 Publicity
 
