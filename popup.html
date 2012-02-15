@@ -1,0 +1,74 @@
+<html> 
+  <head> 
+	  <style type="text/css">
+		.table { 
+		border-style: solid;
+		
+		}
+
+
+	  </style>
+    <script type="text/javascript"> 
+      function onSelection(text) { 
+      	count = text.split(',');
+		      
+        document.getElementById("wordcount_value").innerHTML = count[0];
+        document.getElementById("linecount_value").innerHTML = count[1];
+        document.getElementById("alphabetcount_value").innerHTML = count[2];        
+     } 
+      chrome.extension.getBackgroundPage().getSelection(onSelection); 
+    </script> 
+  </head> 
+  <body> 
+    <div id="output"> 
+      <table id="table" cellspacing="10">
+			<tr>
+				<th id="wordcount_label">
+					Words				
+				</th>		
+				<td>
+					:				
+				</td>	
+				<td id="wordcount_value">
+				
+				</td>
+			</tr>
+			
+			<tr>
+				<th id="linecount_label">
+					Lines				
+				</th>		
+				<td>
+					:				
+				</td>	
+				<td id="linecount_value">
+				
+				</td>
+			</tr>
+			
+			<tr>
+				<th id="alphabetcount_label">
+					Alphabets				
+				</th>		
+				<td>
+					:				
+				</td>	
+				<td id="alphabetcount_value">
+				
+				</td>
+			</tr>
+			<tr>
+						
+				<td colspan="3">
+				<a href="http://blog.6bytesmore.com/"><img src="phalgunpic.png" alt="6bytesmore..." height="36" width="116"/> </a>
+				
+				</td>			
+			
+			
+			</tr>
+			
+		</table> 
+        
+    </div> 
+  </body> 
+</html> 
